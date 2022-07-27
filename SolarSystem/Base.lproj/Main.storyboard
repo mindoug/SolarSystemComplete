@@ -173,6 +173,26 @@
                     <view key="view" contentMode="scaleToFill" id="DQ7-9L-Pf9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pluto" translatesAutoresizingMaskIntoConstraints="NO" id="WHr-vY-dWW">
+                                <rect key="frame" x="42" y="76" width="331" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lonely Pluto." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbX-b7-Kf3">
+                                <rect key="frame" x="158" y="398" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Design this view however you like." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orn-Os-Dib">
+                                <rect key="frame" x="88" y="543" width="239" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dl8-wI-eYR"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -180,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8t-aj-bBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3278" y="79"/>
+            <point key="canvasLocation" x="3276.811594202899" y="78.348214285714278"/>
         </scene>
         <!--Planet Table View Controller-->
         <scene sceneID="t4g-YM-1zv">
@@ -194,6 +214,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facts and photos from Nasa.gov" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2lR-Vk-Vos">
+                            <rect key="frame" x="0.0" y="329" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanetCell" id="xLA-tu-8UT" customClass="PlanetTableViewCell" customModule="SolarSystem" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="194.5" width="414" height="112"/>
@@ -244,7 +271,14 @@
                             <outlet property="delegate" destination="5cM-9v-shS" id="hBS-xW-Pcy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="GN2-IK-2Mn"/>
+                    <navigationItem key="navigationItem" id="GN2-IK-2Mn">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="igZ-cu-Qxc">
+                            <color key="tintColor" systemColor="linkColor"/>
+                            <connections>
+                                <segue destination="Yn2-Ag-CVo" kind="show" id="70v-8D-xNI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="n7t-7H-r1H" kind="show" identifier="planetSegue" id="R4R-yS-Nn3"/>
                     </connections>
@@ -264,8 +298,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wi6-A0-MKo">
                                 <rect key="frame" x="0.0" y="88" width="414" height="189"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgd-vb-9ky">
-                                <rect key="frame" x="155" y="285" width="104" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgd-vb-9ky">
+                                <rect key="frame" x="79" y="285" width="259" height="37"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -347,6 +381,32 @@
             </objects>
             <point key="canvasLocation" x="4000.0000000000005" y="784.82142857142856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="TWC-7W-gyt">
+            <objects>
+                <viewController id="Yn2-Ag-CVo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l5H-h0-e5f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You can add information here." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RlN-M5-NMc">
+                                <rect key="frame" x="87" y="88" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b5W-Oq-v64"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tXH-05-0tk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aqk-QK-t7N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4678" y="785"/>
+        </scene>
         <!--Planets-->
         <scene sceneID="eFK-hz-bec">
             <objects>
@@ -394,8 +454,10 @@
         <image name="earthandmoon" width="400" height="400"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="moon.circle" catalog="system" width="128" height="121"/>
         <image name="moon.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="pluto" width="400" height="400"/>
         <image name="solarsystem" width="400" height="400"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
@@ -403,6 +465,9 @@
         <image name="sun.max.fill" catalog="system" width="128" height="124"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
